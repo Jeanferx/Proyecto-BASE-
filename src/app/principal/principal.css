@@ -1,0 +1,30 @@
+/* Contenedor principal centrado */
+.main-content {
+    height: calc(100vh - 60px);
+    /* altura total menos el menú */
+    background-color: #87CEEB;
+    /* celeste */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* centrado vertical */
+    align-items: center;
+    /* centrado horizontal */
+    text-align: center;
+}
+
+/* Estilos del título */
+.main-content h1 {
+    font-size: 48px;
+    color: #fff;
+    /* blanco para resaltar sobre celeste */
+    margin: 0;
+}
+
+/* Estilos del subtema */
+.main-content p {
+    font-size: 24px;
+    color: #f0f0f0;
+    /* ligeramente más claro que el título */
+    margin-top: 10px;
+}
