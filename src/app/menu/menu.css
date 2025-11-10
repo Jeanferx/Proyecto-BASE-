@@ -1,44 +1,55 @@
-/* Contenedor principal del menú */
+/* Estilo del menú principal */
 .menu {
+    background: linear-gradient(90deg, #006994, #00a8b5);
+    /* azul marino → turquesa */
+    color: white;
     display: flex;
     justify-content: space-between;
-    /* espacio entre los botones y login */
     align-items: center;
-    background-color: #333;
-    /* fondo oscuro */
-    padding: 10px 20px;
-    height: 60px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Grupo de botones de la izquierda */
-.menu-buttons {
-    display: flex;
-    gap: 10px;
-    /* espacio entre botones */
+/* Texto del encabezado */
+.Encabezado p {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 0;
+    color: #e0f7fa;
+    /* azul claro suave */
 }
 
-/* Estilo de los botones */
-.menu button {
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.2s;
-}
-
-.menu button:hover {
-    background-color: #555;
-}
-
-/* Botón de iniciar sesión alineado a la derecha */
+/* Botón de inicio de sesión */
 .login-button {
-    background-color: #0066cc;
+    background-color: #ffffff;
+    color: #007c91;
+    /* tono azul petróleo */
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+/* Efecto hover del botón */
 .login-button:hover {
-    background-color: #005bb5;
+    background-color: #007c91;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Encabezado p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
 }

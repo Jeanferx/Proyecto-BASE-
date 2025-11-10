@@ -1,8 +1,6 @@
 <app-menu (loginClick)="onLoginClicked()"></app-menu>
+<div *ngIf="showLogin">
+    <app-login></app-login>
+</div>
 <app-principal></app-principal>
-
-<!-- Login modal -->
-<app-login *ngIf="showLogin" class="login-container" (close)="showLogin = false">
-</app-login>
-
-<router-outlet></router-outlet>
+<app-copyright></app-copyright>

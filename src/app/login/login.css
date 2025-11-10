@@ -1,97 +1,96 @@
-/* Contenedor del login como modal */
-.login-container {
-    position: fixed;
-    /* obligatorio */
-    top: 0;
-    left: 0;
-    width: 100%;
+/* Fondo general */
+body,
+html {
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #006994, #00a8b5);
+}
+
+/* Contenedor general */
+.login-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    /* debe ser mayor que cualquier otro contenido */
+    /* Centrado horizontal */
+    align-items: flex-start;
+    /* No centrado vertical */
+    padding-top: 80px;
+    /* Distancia desde arriba */
+    min-height: 70vh;
 }
 
-
-/* Caja blanca del login */
+/* Caja del login */
 .login-box {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px 40px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     width: 350px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
     position: relative;
-    /* para posicionar botón de cerrar */
 }
 
-/* Botón de cerrar modal */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-}
 
 /* Título */
 .login-box h2 {
-    margin-bottom: 30px;
-    color: #333;
+    text-align: center;
+    color: #006994;
+    margin-bottom: 20px;
+
 }
 
-/* Grupos de inputs */
+/* Campos */
 .input-group {
-    margin-bottom: 20px;
-    text-align: left;
+    margin-bottom: 15px;
 }
 
 .input-group label {
+    font-weight: 600;
+    color: #007c91;
     display: block;
     margin-bottom: 5px;
-    color: #333;
 }
 
 .input-group input {
     width: 100%;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+    padding: 10px;
+    border: 1.5px solid #00a8b5;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Botón de ingresar */
-.login-box button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #0066cc;
+.input-group input:focus {
+    border-color: #006994;
+    box-shadow: 0 0 5px rgba(0, 168, 181, 0.5);
+}
+
+/* Botón */
+button[type="submit"] {
+    background-color: #00a8b5;
     color: white;
-    font-size: 16px;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s;
 }
 
-.login-box button[type="submit"]:hover {
-    background-color: #005bb5;
+button[type="submit"]:hover {
+    background-color: #007c91;
 }
 
-/* Link de registro */
-.signup-link {
-    margin-top: 15px;
-    font-size: 14px;
-}
+/* Enlace */
+
 
 .signup-link a {
-    color: #0066cc;
+    color: #00a8b5;
     text-decoration: none;
+    font-weight: bold;
+
 }
 
 .signup-link a:hover {
-    text-decoration: underline;
+    color: #006994;
 }
