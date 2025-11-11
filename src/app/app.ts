@@ -16,6 +16,6 @@ export class App {
   showLogin = false;
 
   onLoginClicked() {
-    this.showLogin = true; // muestra el login al hacer clic
+    this.showLogin = true;
   }
 }

@@ -4,7 +4,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   selector: 'app-menu',
   templateUrl: './menu.html',
 
-  styleUrls: ['./menu.css'], // <- corregido
+  styleUrls: ['./menu.css'],
 })
 export class Menu {
   @Output() loginClick = new EventEmitter<void>();
