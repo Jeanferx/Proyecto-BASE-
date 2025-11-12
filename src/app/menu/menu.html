@@ -2,10 +2,40 @@
     <div class="Encabezado">
         <p>Monitoreo Camaronera</p>
     </div>
-    <button matButton [matMenuTriggerFor]="menu">Menu</button>
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
+
+    <!-- Módulo 1: Usuarios -->
+    <button mat-button [matMenuTriggerFor]="menuUsuarios">Usuarios</button>
+    <mat-menu #menuUsuarios="matMenu">
+        <button mat-menu-item routerLink="#">...</button>
+        <button mat-menu-item routerLink="#">...</button>
+    </mat-menu>
+
+    <!-- Módulo 2: Monitoreo -->
+    <button mat-button [matMenuTriggerFor]="menuMonitoreo">Monitoreo</button>
+    <mat-menu #menuMonitoreo="matMenu">
+        <button mat-menu-item routerLink="#">...</button>
+        <button mat-menu-item routerLink="#">...</button>
+    </mat-menu>
+
+    <!-- Módulo 3: Reportes -->
+    <button mat-button [matMenuTriggerFor]="menuReportes">Reportes</button>
+    <mat-menu #menuReportes="matMenu">
+        <button mat-menu-item routerLink="#">...</button>
+        <button mat-menu-item routerLink="#">...</button>
+    </mat-menu>
+
+    <!-- Módulo 4: Inventario -->
+    <button mat-button [matMenuTriggerFor]="menuInventario">Inventario</button>
+    <mat-menu #menuInventario="matMenu">
+        <button mat-menu-item routerLink="#">...</button>
+        <button mat-menu-item routerLink="#">...</button>
+    </mat-menu>
+
+    <!-- Módulo 5: Facturación -->
+    <button mat-button [matMenuTriggerFor]="menuFacturacion">Facturación</button>
+    <mat-menu #menuFacturacion="matMenu">
+        <button mat-menu-item routerLink="#">...</button>
+        <button mat-menu-item routerLink="#">...</button>
     </mat-menu>
     <button class="login-button" (click)="onLoginClick()">Iniciar Sesión</button>
 </nav>
