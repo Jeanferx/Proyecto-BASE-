@@ -1,13 +1,15 @@
-<app-menu (loginClick)="onLoginClicked()"></app-menu>
+<app-menu (loginClick)="onLoginClicked()" (registerClick)="onRegisterClicked()">
+</app-menu>
 
-<!-- Mostrar login solo si showLogin es true -->
-<div *ngIf="showLogin; else principalSection">
+<!-- Mostrar login o registro según la selección -->
+<div *ngIf="showLogin">
     <app-login></app-login>
 </div>
 
-<!-- Si no se muestra login, muestra principal -->
-<ng-template #principalSection>
-    <app-principal></app-principal>
+<ng-template #checkRegister>
+    <div *ngIf="showRegister">
+        <app-registrar-user></app-registrar-user>
+    </div>
 </ng-template>
-<app-copyright></app-copyright>
 <router-outlet></router-outlet>
+<app-copyright></app-copyright>

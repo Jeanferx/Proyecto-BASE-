@@ -1,71 +1,78 @@
-/* Estilo del menú principal */
 .menu {
-    background: linear-gradient(90deg, #072e75, #002ab5);
-    /* azul profundo → turquesa */
-    color: white;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-    font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    background: linear-gradient(90deg, #004e92, #002fff);
+    color: white;
+    padding: 10px 30px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: relative;
 }
 
-/* Texto del encabezado */
+/* Título a la izquierda */
+.Encabezado {
+    position: absolute;
+    left: 30px;
+}
+
 .Encabezado p {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 0;
-    color: #006eff;
-    /* amarillo suave contrastante */
-    text-transform: uppercase;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Botones de menú (Angular Material) */
-button[mat-button] {
-    color: #e0f7fa;
-    font-size: 16px;
+    font-size: 1.4rem;
     font-weight: 600;
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-button[mat-button]:hover {
-    color: #36c7af;
-    transform: translateY(-2px);
-}
-
-/* Botón de inicio de sesión */
-.login-button {
-    background-color: #ffffff;
-    color: #007c91;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 16px;
+    margin: 0;
     letter-spacing: 0.5px;
-    cursor: pointer;
+}
+
+/* Botones del menú centrados */
+.menu button[mat-button] {
+    color: white;
+    font-weight: 500;
+    margin: 0 10px;
     transition: all 0.3s ease;
 }
 
-/* Efecto hover del botón */
-.login-button:hover {
-    background-color: #007c91;
-    color: white;
-    transform: scale(1.08);
+.menu button[mat-button]:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
 }
 
-/* Adaptación a pantallas pequeñas */
-@media (max-width: 768px) {
+/* Contenedor del login a la derecha */
+.login {
+    position: absolute;
+    right: 30px;
+}
+
+/* Botón de login pequeño y elegante */
+.login-button {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white !important;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    line-height: 1;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 900px) {
     .menu {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .Encabezado {
+        position: static;
+        margin-bottom: 10px;
         text-align: center;
     }
 
-    .Encabezado p {
-        font-size: 18px;
-        margin-bottom: 10px;
+    .login {
+        position: static;
+        margin-top: 10px;
     }
 }
