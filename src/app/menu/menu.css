@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, #004e92, #002fff);
+    background: linear-gradient(90deg, #000a68, #0066ff);
     color: white;
     padding: 10px 30px;
     font-family: 'Poppins', sans-serif;
@@ -14,6 +14,7 @@
 .Encabezado {
     position: absolute;
     left: 30px;
+    color: #d0ff00;
 }
 
 .Encabezado p {
