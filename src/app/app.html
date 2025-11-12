@@ -1,7 +1,13 @@
 <app-menu (loginClick)="onLoginClicked()"></app-menu>
-<div *ngIf="showLogin">
+
+<!-- Mostrar login solo si showLogin es true -->
+<div *ngIf="showLogin; else principalSection">
     <app-login></app-login>
 </div>
-<app-principal></app-principal>
+
+<!-- Si no se muestra login, muestra principal -->
+<ng-template #principalSection>
+    <app-principal></app-principal>
+</ng-template>
 <app-copyright></app-copyright>
 <router-outlet></router-outlet>
