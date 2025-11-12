@@ -1,6 +1,6 @@
 /* Contenedor principal centrado */
 .main-content {
-    height: calc(100vh - 60px);
+    height: calc(90vh - 60px);
     /* altura total menos el menú */
     background-color: #87CEEB;
     /* celeste */
