@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, #000a68, #0066ff);
+    background: linear-gradient(90deg, #000a68, #00a2ff);
     color: white;
     padding: 10px 30px;
     font-family: 'Poppins', sans-serif;
@@ -45,12 +45,15 @@
 
 /* Botón de login pequeño y elegante */
 .login-button {
-    background-color: rgba(255, 255, 255, 0.25);
-    color: white !important;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    padding: 3px 10px;
-    line-height: 1;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
