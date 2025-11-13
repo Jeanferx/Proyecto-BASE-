@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -8,7 +9,9 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./login.css'],
 })
 export class Login {
+  constructor(private router: Router) { }
   onSubmit() {
-    alert('Se procederá a validar las credenciales de acceso');
+    alert('Inicio de sesión exitoso');
+    this.router.navigate(['']);
   }
 }
