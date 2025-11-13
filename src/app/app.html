@@ -1,4 +1,4 @@
-<app-menu (loginClick)="onLoginClicked()" (registerClick)="onRegisterClicked()">
+<app-menu (loginClick)="onLoginClicked()" (registerClick)="onRegisterClicked()" (ListaClick)="onListaClicked()">
 </app-menu>
 
 <!-- Mostrar login o registro según la selección -->
@@ -6,10 +6,13 @@
     <app-login></app-login>
 </div>
 
-<ng-template #checkRegister>
-    <div *ngIf="showRegister">
-        <app-registrar-user></app-registrar-user>
-    </div>
-</ng-template>
+<div *ngIf="showRegister">
+    <app-registrar-user></app-registrar-user>
+</div>
+
+<div *ngIf="showLista">
+    <app-lista-user></app-lista-user>
+</div>
+
 <router-outlet></router-outlet>
 <app-copyright></app-copyright>
