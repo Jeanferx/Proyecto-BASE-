@@ -10,10 +10,10 @@ import Swal from 'sweetalert2';
 })
 export class ListaUser {
   usuarios = [
-    { nombre: 'Juan', apellido: 'Pérez', edad: 18, genero: 'Masculino', correo: 'juan.perez@gmail.com', rol: 'Operador' },
-    { nombre: 'María', apellido: 'López', edad: 22, genero: 'Femenino', correo: 'maria.lopez@gmail.com', rol: 'Administradora' },
-    { nombre: 'Carlos', apellido: 'Rodríguez', edad: 30, genero: 'Masculino', correo: 'carlos.rodriguez@gmail.com', rol: 'Supervisor' },
-    { nombre: 'Ana', apellido: 'Torres', edad: 25, genero: 'Femenino', correo: 'ana.torres@gmail.com', rol: 'Supervisor' },
+    { nombre: 'Juan', apellido: 'Pérez', edad: 18, genero: 'Masculino', correo: 'juan.perez@gmail.com', password: 12345, rol: 'Operador' },
+    { nombre: 'María', apellido: 'López', edad: 22, genero: 'Femenino', correo: 'maria.lopez@gmail.com', password: 12345, rol: 'Administradora' },
+    { nombre: 'Carlos', apellido: 'Rodríguez', edad: 30, genero: 'Masculino', correo: 'carlos.rodriguez@gmail.com', password: 12345, rol: 'Supervisor' },
+    { nombre: 'Ana', apellido: 'Torres', edad: 25, genero: 'Femenino', correo: 'ana.torres@gmail.com', password: 12345, rol: 'Supervisor' },
   ];
   eliminarUsuario(usuario: any) {
     Swal.fire({
