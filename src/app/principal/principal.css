@@ -2,7 +2,7 @@
 .main-content {
     height: calc(90vh - 60px);
     /* altura total menos el menú */
-    background-color: #1b8ebb;
+    background-color: #0E3A56;
     /* celeste */
     display: flex;
     flex-direction: column;

@@ -1,13 +1,30 @@
 <div class="user-list-container">
     <h2>Lista de Usuarios</h2>
 
-    <div class="user-card" *ngFor="let usuario of usuarios">
-        <span class="user-name">{{ usuario.nombre }}</span>
-
-        <div class="actions">
-            <button class="btn edit">Editar</button>
-            <button class="btn delete" (click)="eliminarUsuario(usuario)">Eliminar</button>
-            <button class="btn view" (click)="leerUsuario(usuario)">Leer</button>
-        </div>
-    </div>
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Rol</th>
+                <th>Edad</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of usuarios">
+                <td>{{ usuario.nombre }}</td>
+                <td>{{ usuario.apellido }}</td>
+                <td>{{ usuario.rol }}</td>
+                <td>{{ usuario.edad }}</td>
+                <td>{{ usuario.correo }}</td>
+                <td>
+                    <button class="btn edit" (click)="editarUsuario(usuario)">Editar</button>
+                    <button class="btn view" (click)="volverUsuario(usuario)">Volver</button>
+                    <button class="btn delete" (click)="eliminarUsuario(usuario)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
