@@ -2,64 +2,124 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, #0E3A56, #00a2ff);
+    background-color: #0D1B2A !important;
     color: white;
     padding: 10px 30px;
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     position: relative;
+    min-height: 60px;
 }
 
 /* Título a la izquierda */
 .Encabezado {
     position: absolute;
     left: 30px;
-    color: #d0ff00;
+    color: #ffffff;
 }
 
-.Encabezado p {
-    font-size: 1.4rem;
-    font-weight: 600;
+.Encabezado span {
+    font-size: 1.1rem;
+    font-weight: 500;
     margin: 0;
     letter-spacing: 0.5px;
+}
+
+/* Contenedor de módulos centrado */
+.modulos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 /* Botones del menú centrados */
 .menu button[mat-button] {
     color: white;
     font-weight: 500;
-    margin: 0 10px;
+    margin: 0 8px;
     transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .menu button[mat-button]:hover {
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: 6px;
+    transform: translateY(-2px);
+}
+
+/* Estilos para los menús desplegables */
+.mat-menu-panel {
+    background-color: #1B263B !important;
+    border-radius: 8px !important;
+}
+
+.mat-menu-item {
+    color: white !important;
+    font-family: 'Poppins', sans-serif !important;
+    transition: all 0.3s ease !important;
+}
+
+.mat-menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 /* Contenedor del login a la derecha */
 .login {
     position: absolute;
     right: 30px;
+    display: flex;
+    gap: 10px;
 }
 
 /* Botón de login pequeño y elegante */
 .login-button {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #007bff;
+    color: #ffffff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 16px;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
     letter-spacing: 0.5px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .login-button:hover {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: #0056b3;
     transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Botón de logout */
+.logout-button {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Estilos para cuando no hay usuario logueado (solo mostrar login) */
+.menu:has(.modulos:empty) {
+    justify-content: space-between;
+}
+
+/* Efectos de transición para cuando aparecen/desaparecen los módulos */
+.modulos {
+    transition: all 0.3s ease;
 }
 
 /* Responsivo para pantallas pequeñas */
@@ -67,16 +127,104 @@
     .menu {
         flex-direction: column;
         align-items: center;
+        padding: 15px 20px;
+        gap: 15px;
     }
 
     .Encabezado {
         position: static;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         text-align: center;
+        order: 1;
+    }
+
+    .modulos {
+        order: 2;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .menu button[mat-button] {
+        margin: 2px 5px;
+        font-size: 0.85rem;
+        padding: 6px 12px;
     }
 
     .login {
         position: static;
-        margin-top: 10px;
+        order: 3;
+        margin-top: 5px;
     }
+
+    .login-button,
+    .logout-button {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .menu {
+        padding: 10px 15px;
+    }
+
+    .Encabezado span {
+        font-size: 1rem;
+    }
+
+    .modulos {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .menu button[mat-button] {
+        width: 100%;
+        text-align: center;
+        margin: 2px 0;
+    }
+
+    .login {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .login-button,
+    .logout-button {
+        width: 100%;
+        margin: 2px 0;
+    }
+}
+
+/* Animación suave para la aparición de elementos */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modulos>* {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Estilos para el menú de Angular Material personalizado */
+::ng-deep .mat-menu-content {
+    background-color: #1B263B !important;
+    border-radius: 8px !important;
+}
+
+::ng-deep .mat-menu-item {
+    color: white !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+::ng-deep .mat-menu-item:hover:not([disabled]) {
+    background-color: rgba(255, 255, 255, 0.1) !important;
 }

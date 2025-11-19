@@ -1,9 +1,10 @@
-<app-menu (loginClick)="onLoginClicked()" (registerClick)="onRegisterClicked()" (ListaClick)="onListaClicked()">
+<!-- 🔵 CONECTAR el evento logoutClick -->
+<app-menu [nombreUsuario]="nombreUsuario" (loginClick)="onLoginClicked()" (logoutClick)="onLogoutClicked()">
+    <!-- 🔵 ESTA ES LA CONEXIÓN -->
 </app-menu>
 
-<!-- Mostrar login o registro según la selección -->
 <div *ngIf="showLogin">
-    <app-login></app-login>
+    <app-login (loginExitoso)="recibirLogin($event)"></app-login>
 </div>
 
 <div *ngIf="showRegister">
@@ -14,5 +15,9 @@
     <app-lista-user></app-lista-user>
 </div>
 
-<router-outlet></router-outlet>
+<!-- Ocultar principal cuando se muestra login -->
+<div *ngIf="!showLogin && !showRegister && !showLista">
+    <router-outlet></router-outlet>
+</div>
+
 <app-copyright></app-copyright>

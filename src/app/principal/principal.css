@@ -1,30 +1,46 @@
 /* Contenedor principal centrado */
 .main-content {
     height: calc(90vh - 60px);
-    /* altura total menos el menú */
+    background: linear-gradient(135deg, #0A2533, #0E3A56) !important;
     background-color: #0E3A56;
-    /* celeste */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* centrado vertical */
     align-items: center;
-    /* centrado horizontal */
-    text-align: center;
+}
+
+/* Sección hero */
+.hero {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 /* Estilos del título */
-.main-content h1 {
-    font-size: 48px;
+.hero h1 {
+    font-size: 34px;
     color: #fff;
-    /* blanco para resaltar sobre celeste */
     margin: 0;
 }
 
-/* Estilos del subtema */
-.main-content p {
-    font-size: 24px;
+/* Estilos del párrafo */
+.hero p {
+    font-size: 18px;
     color: #f0f0f0;
-    /* ligeramente más claro que el título */
     margin-top: 10px;
+    width: 75%;
+}
+
+/* Estilos del botón */
+.hero button {
+    background-color: #f8f9fa !important;
+    /* Fondo gris claro al pasar el mouse */
+    color: #0056b3 !important;
+    /* Texto azul más oscuro */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 18px;
+    margin-top: 1rem;
 }

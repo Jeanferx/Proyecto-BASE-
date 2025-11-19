@@ -1,43 +1,51 @@
 <nav class="menu">
     <div class="Encabezado">
-        <p>Monitoreo Camaronera</p>
+        <span *ngIf="!nombreUsuario">Inicie sesión para continuar</span>
+        <span *ngIf="nombreUsuario">Bienvenido, {{ nombreUsuario }}</span>
     </div>
 
-    <!-- Módulo 1: Usuarios -->
-    <button mat-button [matMenuTriggerFor]="menuUsuarios">Usuarios</button>
-    <mat-menu #menuUsuarios="matMenu">
-        <button mat-menu-item routerLink="./registrar">Registro</button>
-        <button mat-menu-item routerLink="./lista">Lista</button>
-    </mat-menu>
+    <!-- Mostrar módulos SOLO cuando hay usuario logueado -->
+    <div *ngIf="nombreUsuario" class="modulos">
+        <!-- Módulo 1: Usuarios -->
+        <button mat-button [matMenuTriggerFor]="menuUsuarios">Usuarios</button>
+        <mat-menu #menuUsuarios="matMenu">
+            <button mat-menu-item routerLink="./registrar">Registro</button>
+            <button mat-menu-item routerLink="./lista">Lista</button>
+        </mat-menu>
 
-    <!-- Módulo 2: Monitoreo -->
-    <button mat-button [matMenuTriggerFor]="menuMonitoreo">Monitoreo</button>
-    <mat-menu #menuMonitoreo="matMenu">
-        <button mat-menu-item routerLink="#">...</button>
-        <button mat-menu-item routerLink="#">...</button>
-    </mat-menu>
+        <!-- Módulo 2: Monitoreo -->
+        <button mat-button [matMenuTriggerFor]="menuMonitoreo">Monitoreo</button>
+        <mat-menu #menuMonitoreo="matMenu">
+            <button mat-menu-item routerLink="#">...</button>
+            <button mat-menu-item routerLink="#">...</button>
+        </mat-menu>
 
-    <!-- Módulo 3: Reportes -->
-    <button mat-button [matMenuTriggerFor]="menuReportes">Reportes</button>
-    <mat-menu #menuReportes="matMenu">
-        <button mat-menu-item routerLink="#">...</button>
-        <button mat-menu-item routerLink="#">...</button>
-    </mat-menu>
+        <!-- Módulo 3: Reportes -->
+        <button mat-button [matMenuTriggerFor]="menuReportes">Reportes</button>
+        <mat-menu #menuReportes="matMenu">
+            <button mat-menu-item routerLink="#">...</button>
+            <button mat-menu-item routerLink="#">...</button>
+        </mat-menu>
 
-    <!-- Módulo 4: Inventario -->
-    <button mat-button [matMenuTriggerFor]="menuInventario">Inventario</button>
-    <mat-menu #menuInventario="matMenu">
-        <button mat-menu-item routerLink="#">...</button>
-        <button mat-menu-item routerLink="#">...</button>
-    </mat-menu>
+        <!-- Módulo 4: Inventario -->
+        <button mat-button [matMenuTriggerFor]="menuInventario">Inventario</button>
+        <mat-menu #menuInventario="matMenu">
+            <button mat-menu-item routerLink="#">...</button>
+            <button mat-menu-item routerLink="#">...</button>
+        </mat-menu>
 
-    <!-- Módulo 5: Facturación -->
-    <button mat-button [matMenuTriggerFor]="menuFacturacion">Facturación</button>
-    <mat-menu #menuFacturacion="matMenu">
-        <button mat-menu-item routerLink="#">...</button>
-        <button mat-menu-item routerLink="#">...</button>
-    </mat-menu>
+        <!-- Módulo 5: Facturación -->
+        <button mat-button [matMenuTriggerFor]="menuFacturacion">Facturación</button>
+        <mat-menu #menuFacturacion="matMenu">
+            <button mat-menu-item routerLink="#">...</button>
+            <button mat-menu-item routerLink="#">...</button>
+        </mat-menu>
+    </div>
+
     <div class="login">
-        <button class="login-button" mat-menu-item routerLink="./login">Iniciar Sesión</button>
+        <!-- Mostrar botón Login solo cuando NO hay usuario -->
+        <button *ngIf="!nombreUsuario" class="login-button" (click)="loginClick.emit()">Login</button>
+        <!-- Mostrar botón Logout cuando SÍ hay usuario -->
+        <button *ngIf="nombreUsuario" class="logout-button" (click)="onLogout()">Logout</button>
     </div>
 </nav>
