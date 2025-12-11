@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Menu } from './menu/menu';
-import { Copyright } from './copyright/copyright';
-import { Login } from './login/login';
+import { Menu } from './shared/menu/menu';
+import { Copyright } from './shared/copyright/copyright';
+import { Login } from './feature/login/login';
 @Component({
   selector: 'app-root',
   standalone: true,
