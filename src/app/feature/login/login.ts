@@ -1,7 +1,10 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+<<<<<<< HEAD:src/app/login/login.ts
 
+=======
+>>>>>>> master:src/app/feature/login/login.ts
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -10,6 +13,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.css'],
 })
 export class Login {
+<<<<<<< HEAD:src/app/login/login.ts
   @Output() loginExitoso = new EventEmitter<string>();  // 🔵 AGREGAR ESTO
 
   usuario: string = '';
@@ -31,6 +35,12 @@ export class Login {
     } else {
       alert('Credenciales incorrectas');
     }
+=======
+  constructor(private router: Router) { }
+  onSubmit() {
+    alert('Inicio de sesión exitoso');
+    this.router.navigate(['']);
+>>>>>>> master:src/app/feature/login/login.ts
   }
 
   irARegistro() {

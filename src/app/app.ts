@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Menu } from './menu/menu';
-import { Copyright } from './copyright/copyright';
-import { Login } from './login/login';
-import { RegistrarUser } from './registrar-user/registrar-user';
-import { ListaUser } from './lista-user/lista-user';
+import { Menu } from './shared/menu/menu';
+import { Copyright } from './shared/copyright/copyright';
+import { Login } from './feature/login/login';
+import { ListaUser } from './feature/lista-user/lista-user';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +15,6 @@ import { ListaUser } from './lista-user/lista-user';
     Menu,
     Copyright,
     Login,
-    RegistrarUser,
     ListaUser
   ],
   templateUrl: './app.html',
