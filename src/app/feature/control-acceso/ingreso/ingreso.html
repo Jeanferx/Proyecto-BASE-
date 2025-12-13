@@ -1,0 +1,29 @@
+<div class="contenedor-acceso">
+  <h2>Registrar Nuevo Ingreso</h2>
+  <div class="formulario">
+    <label>Tipo:</label>
+    <select [(ngModel)]="registro.tipo">
+      <option value="Visitante">Visitante</option>
+      <option value="Proveedor">Proveedor</option>
+      <option value="Personal">Personal</option>
+    </select>
+
+    <label>Identificación:</label>
+    <input type="text" [(ngModel)]="registro.identificacion" placeholder="Cédula o Placa" />
+
+    <label>Nombre:</label>
+    <input type="text" [(ngModel)]="registro.nombre" placeholder="Nombre completo" />
+
+    <label>Motivo:</label>
+    <input type="text" [(ngModel)]="registro.motivo" placeholder="Razón de visita" />
+
+    <label>Foto:</label>
+    <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+
+    <div class="vista-previa" *ngIf="registro.foto">
+      <img [src]="registro.foto" alt="Foto" />
+    </div>
+
+    <button (click)="guardar()" class="btn-registrar">Registrar</button>
+  </div>
+</div>

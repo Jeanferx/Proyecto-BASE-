@@ -1,0 +1,82 @@
+.contenedor-reporte {
+  padding: 20px;
+  background: #f4f6f8;
+  height: 100vh;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+th {
+  background: #006994;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+.foto-cell img {
+  width: 64px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.btn-salida {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-salida:hover {
+  opacity: 0.9;
+}
+.salida-cell {
+  width: 160px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 700px) {
+  .foto-cell img {
+    width: 48px;
+    height: 36px;
+  }
+  .salida-cell {
+    width: auto;
+    font-size: 0.9em;
+  }
+  table {
+    font-size: 13px;
+  }
+}
+.badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  color: white;
+  font-weight: bold;
+}
+.badge.Personal {
+  background: #28a745;
+}
+.badge.Proveedor {
+  background: #ffc107;
+  color: black;
+}
+.badge.Visitante {
+  background: #17a2b8;
+}
+h2 {
+  color: #006994;
+  text-align: center;
+}

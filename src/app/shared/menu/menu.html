@@ -1,50 +1,53 @@
 <nav class="menu">
-    <div class="Encabezado">
-        <span *ngIf="!nombreUsuario">Inicie sesión para continuar</span>
-        <span *ngIf="nombreUsuario">Bienvenido, {{ nombreUsuario }}</span>
-    </div>
-    <!-- Módulo 1: Usuarios -->
-    <button mat-button [matMenuTriggerFor]="menuUsuarios">
-        <i class="fa-solid fa-user"></i> Usuarios</button>
-    <mat-menu #menuUsuarios="matMenu">
-        <button mat-menu-item routerLink="./registrar">Registro</button>
-        <button mat-menu-item routerLink="./lista">Lista</button>
-    </mat-menu>
+  <div class="Encabezado">
+    <span *ngIf="!nombreUsuario">Inicie sesión para continuar</span>
+    <span *ngIf="nombreUsuario">Bienvenido, {{ nombreUsuario }}</span>
+  </div>
+  <!-- Módulo 1: Usuarios -->
+  <button mat-button [matMenuTriggerFor]="menuUsuarios">
+    <i class="fa-solid fa-user"></i> Usuarios
+  </button>
+  <mat-menu #menuUsuarios="matMenu">
+    <button mat-menu-item routerLink="./registrar">Registro</button>
+    <button mat-menu-item routerLink="./lista">Lista</button>
+  </mat-menu>
 
-    <!-- Módulo 2: Monitoreo -->
-    <button mat-button [matMenuTriggerFor]="menuMonitoreo">
-        <i class="fa-solid fa-camera"></i> Monitoreo</button>
-    <mat-menu #menuMonitoreo="matMenu">
-        <button mat-menu-item routerLink="#">...</button>
-        <button mat-menu-item routerLink="#">...</button>
-    </mat-menu>
+  <!-- Módulo 2: Monitoreo -->
+  <button mat-button [matMenuTriggerFor]="menuMonitoreo">
+    <i class="fa-solid fa-camera"></i> Monitoreo
+  </button>
+  <mat-menu #menuMonitoreo="matMenu">
+    <button mat-menu-item routerLink="#">...</button>
+    <button mat-menu-item routerLink="#">...</button>
+  </mat-menu>
 
-    <!-- Módulo 3: Reportes -->
-    <button mat-button [matMenuTriggerFor]="menuReportes">
-        <i class="fa-solid fa-file"></i> Reportes</button>
-    <mat-menu #menuReportes="matMenu">
-        <button mat-menu-item routerLink="#">...</button>
-        <button mat-menu-item routerLink="#">...</button>
-    </mat-menu>
+  <button mat-button [matMenuTriggerFor]="menuReportes">
+    <i class="fa-solid fa-chart-line"></i> Reportes
+  </button>
+  <mat-menu #menuReportes="matMenu">
+    <button mat-menu-item routerLink="/accesos/ingreso">Ingreso</button>
+    <button mat-menu-item routerLink="/accesos/registros">Registros</button>
+  </mat-menu>
 
-    <!-- Módulo 4: Inventario -->
-    <button mat-button [matMenuTriggerFor]="menuInventario">
-        <i class="fa-solid fa-box"></i> Inventario</button>
-    <mat-menu #menuInventario="matMenu">
-        <button mat-menu-item routerLink="#">...</button>
-        <button mat-menu-item routerLink="#">...</button>
-    </mat-menu>
+  <!-- Módulo 4: Inventario -->
+  <button mat-button [matMenuTriggerFor]="menuInventario">
+    <i class="fa-solid fa-box"></i> Inventario
+  </button>
+  <mat-menu #menuInventario="matMenu">
+    <button mat-menu-item routerLink="#">...</button>
+    <button mat-menu-item routerLink="#">...</button>
+  </mat-menu>
 
-    <!-- Módulo 5: Facturación -->
-    <button mat-button [matMenuTriggerFor]="menuFacturacion">
-        <i class="fa-solid fa-file-invoice-dollar"></i>
-        Facturación
-    </button>
-    <mat-menu #menuFacturacion="matMenu">
-        <button mat-menu-item routerLink="#">...</button>
-        <button mat-menu-item routerLink="#">...</button>
-    </mat-menu>
-    <div class="login">
-        <button class="login-button" mat-menu-item routerLink="./login">Iniciar Sesión</button>
-    </div>
+  <!-- Módulo 5: Facturación -->
+  <button mat-button [matMenuTriggerFor]="menuFacturacion">
+    <i class="fa-solid fa-file-invoice-dollar"></i>
+    Facturación
+  </button>
+  <mat-menu #menuFacturacion="matMenu">
+    <button mat-menu-item routerLink="#">...</button>
+    <button mat-menu-item routerLink="#">...</button>
+  </mat-menu>
+  <div class="login">
+    <button class="login-button" mat-menu-item routerLink="./login">Iniciar Sesión</button>
+  </div>
 </nav>

@@ -1,0 +1,40 @@
+<div class="contenedor-reporte">
+  <h2>Historial de Accesos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Foto</th>
+        <th>Nombre/Placa</th>
+        <th>Identificación</th>
+        <th>Tipo</th>
+        <th>Motivo</th>
+        <th>Salida</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of historial">
+        <td>{{ item.fecha }}</td>
+        <td>
+          <div class="foto-cell" *ngIf="item.foto">
+            <img [src]="item.foto" alt="Foto" />
+          </div>
+        </td>
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.identificacion }}</td>
+        <td>
+          <span class="badge" [ngClass]="item.tipo">{{ item.tipo }}</span>
+        </td>
+        <td>{{ item.motivo }}</td>
+        <td class="salida-cell">
+          <div *ngIf="item.salida; else noSalida">{{ item.salida }}</div>
+          <ng-template #noSalida>
+            <button class="btn-salida" (click)="registrarSalida(item.identificacion)">
+              Registrar Salida
+            </button>
+          </ng-template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
