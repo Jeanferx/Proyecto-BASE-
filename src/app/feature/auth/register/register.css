@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #e3f2fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 50px 40px;
+    /* más ancho */
+    text-align: center;
+    min-width: 400px;
+    /* más ancho */
+    max-width: 500px;
+    /* más ancho */
+    width: 90%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.card h1 {
+    color: #0277bd;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #0277bd;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #81d4fa;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #0288d1;
+    box-shadow: 0 0 8px rgba(2, 136, 209, 0.5);
+}
+
+/* Contraseña con icono */
+.password-group {
+    position: relative;
+}
+
+.password-group .show-btn {
+    position: absolute;
+    right: 10px;
+    top: 38px;
+    background: none;
+    border: none;
+    color: #0288d1;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.password-group .show-btn:hover svg {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* Botón registrar */
+button.btn-animated[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #0288d1, #03a9f4);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+button.btn-animated[type="submit"]:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(90deg, #03a9f4, #0288d1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

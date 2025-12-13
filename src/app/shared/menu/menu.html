@@ -5,15 +5,15 @@
     </div>
     <!-- Módulo 1: Usuarios -->
     <button mat-button [matMenuTriggerFor]="menuUsuarios">
-    <i class="fa-solid fa-user"></i> Usuarios</button>
+        <i class="fa-solid fa-user"></i> Usuarios</button>
     <mat-menu #menuUsuarios="matMenu">
         <button mat-menu-item routerLink="./registrar">Registro</button>
-        <button mat-menu-item routerLink="#">...</button>
+        <button mat-menu-item routerLink="./lista">Lista</button>
     </mat-menu>
 
     <!-- Módulo 2: Monitoreo -->
-    <button mat-button [matMenuTriggerFor]="menuMonitoreo"> 
-    <i class="fa-solid fa-camera"></i> Monitoreo</button>
+    <button mat-button [matMenuTriggerFor]="menuMonitoreo">
+        <i class="fa-solid fa-camera"></i> Monitoreo</button>
     <mat-menu #menuMonitoreo="matMenu">
         <button mat-menu-item routerLink="#">...</button>
         <button mat-menu-item routerLink="#">...</button>
@@ -37,8 +37,8 @@
 
     <!-- Módulo 5: Facturación -->
     <button mat-button [matMenuTriggerFor]="menuFacturacion">
-    <i class="fa-solid fa-file-invoice-dollar"></i>
-    Facturación
+        <i class="fa-solid fa-file-invoice-dollar"></i>
+        Facturación
     </button>
     <mat-menu #menuFacturacion="matMenu">
         <button mat-menu-item routerLink="#">...</button>

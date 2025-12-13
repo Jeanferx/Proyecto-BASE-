@@ -23,15 +23,17 @@ export class Login {
     if (this.usuario === this.usuarioValido && this.clave === this.claveValida) {
       alert('Login correcto');
 
-      // 🔵 EMITIR EL EVENTO AL APP COMPONENT
+      // Emitir evento (opcional si lo necesitas en el componente padre)
       this.loginExitoso.emit(this.usuario);
       console.log("🤖 Login emitiendo:", this.usuario);
 
+      // 🔵 Redirigir a la página principal
+      this.router.navigate(['']);
     } else {
       alert('Credenciales incorrectas');
     }
-
   }
+
 
   irARegistro() {
     this.router.navigate(['/registrar']);

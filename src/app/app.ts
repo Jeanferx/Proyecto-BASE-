@@ -3,8 +3,8 @@ import { RouterOutlet, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Menu } from './shared/menu/menu';
 import { Copyright } from './shared/copyright/copyright';
-import { Login } from './feature/login/login';
-import { ListaUser } from './feature/lista-user/lista-user';
+import { Login } from './feature/auth/login/login';
+import { ListaUser } from './feature/auth/lista-user/lista-user';
 
 @Component({
   selector: 'app-root',
