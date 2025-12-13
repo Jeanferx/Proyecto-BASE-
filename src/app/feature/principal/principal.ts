@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Login } from '../login/login'
+import { Login } from '../auth/login/login'
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.html',
